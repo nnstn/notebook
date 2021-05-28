@@ -1,0 +1,29 @@
+#app .navbar .home-link span:before{
+    display: inline-block;
+    content: '';
+    width: 3rem;
+    height: 2.4rem;
+    background: url('../images/logo4.png') no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+/**
+header.navbar {
+    display: none;
+}
+.page-edit{
+    display: none;
+}**/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.1);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: rgba(0,0,0,0.1);
+}

@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "9e43b5af-cee7-46a4-959b-0ce307321393",
+		"name": "黔南",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "人证比对和人脸录入",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "3c0nOpA+p2F1fs9L7lDOlw==",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imageA\":\"{{pic}}\",\r\n    \"imageB\":\"{{pic}}\",\r\n    \"id_card\":\"110101199003073773\",\r\n    \"group_id\":\"100000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://aicp.teamshub.com/abilityopen/compare",
+					"protocol": "http",
+					"host": [
+						"aicp",
+						"teamshub",
+						"com"
+					],
+					"path": [
+						"abilityopen",
+						"compare"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "人脸搜索",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"value": "Lb5iIchhRy3uysE7gF6tyg==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\"image\": \"{{pic}}\", \r\n    \"image_type\": \"BASE64\",\r\n    \"group_id_list\": \"100000\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://aicp.teamshub.com/face-api/v3/face/identify",
+					"protocol": "http",
+					"host": [
+						"aicp",
+						"teamshub",
+						"com"
+					],
+					"path": [
+						"face-api",
+						"v3",
+						"face",
+						"identify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "人脸注册",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"type": "text",
+						"value": "Lb5iIchhRy3uysE7gF6tyg=="
+					},
+					{
+						"key": "",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"image\":\"{{pic}}\",\n    \"image_type\": \"BASE64\",\n    \"group_id\": \"100000\",\n    \"user_id\" : \"u4\",\n    \"user_info\" : \"abc\"\n\t\n\n}"
+				},
+				"url": {
+					"raw": "http://aicp.teamshub.com/face-api/v3/face/add",
+					"protocol": "http",
+					"host": [
+						"aicp",
+						"teamshub",
+						"com"
+					],
+					"path": [
+						"face-api",
+						"v3",
+						"face",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
